@@ -1,4 +1,6 @@
-<html lang="en"><head>
+<!doctype html>
+<html lang="en">
+<head>
     <title>Code coverage report for node-npmtest-fs-extra/fs-extra/lib/remove/rimraf.js</title>
     <meta charset="utf-8">
     <style>
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-fs-extra/fs-extra/lib/remove/</a> » rimraf.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-fs-extra/fs-extra/lib/remove/</a> &#187; rimraf.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -814,8 +816,8 @@ const assert = require('assert')
 &nbsp;
 const isWindows = (process.platform === 'win32')
 &nbsp;
-<span class="fstat-no" title="function not covered">function defaults (options) {</span>
-<span class="cstat-no" title="statement not covered">  const methods = [</span>
+<span class="fstat-no" title="function not covered" >function defaults (options) {</span>
+<span class="cstat-no" title="statement not covered" >  const methods = [</span>
     'unlink',
     'chmod',
     'stat',
@@ -823,46 +825,46 @@ const isWindows = (process.platform === 'win32')
     'rmdir',
     'readdir'
   ]
-<span class="cstat-no" title="statement not covered">  methods.forEach(m =&gt; {</span>
-<span class="cstat-no" title="statement not covered">    options[m] = options[m] || fs[m]</span>
-<span class="cstat-no" title="statement not covered">    m = m + 'Sync'</span>
-<span class="cstat-no" title="statement not covered">    options[m] = options[m] || fs[m]</span>
+<span class="cstat-no" title="statement not covered" >  methods.forEach(m =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    options[m] = options[m] || fs[m]</span>
+<span class="cstat-no" title="statement not covered" >    m = m + 'Sync'</span>
+<span class="cstat-no" title="statement not covered" >    options[m] = options[m] || fs[m]</span>
   })
 &nbsp;
-<span class="cstat-no" title="statement not covered">  options.maxBusyTries = options.maxBusyTries || 3</span>
+<span class="cstat-no" title="statement not covered" >  options.maxBusyTries = options.maxBusyTries || 3</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function rimraf (p, options, cb) {</span>
-<span class="cstat-no" title="statement not covered">  let busyTries = 0</span>
+<span class="fstat-no" title="function not covered" >function rimraf (p, options, cb) {</span>
+<span class="cstat-no" title="statement not covered" >  let busyTries = 0</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (typeof options === 'function') {</span>
-<span class="cstat-no" title="statement not covered">    cb = options</span>
-<span class="cstat-no" title="statement not covered">    options = {}</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof options === 'function') {</span>
+<span class="cstat-no" title="statement not covered" >    cb = options</span>
+<span class="cstat-no" title="statement not covered" >    options = {}</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  assert(p, 'rimraf: missing path')</span>
-<span class="cstat-no" title="statement not covered">  assert.equal(typeof p, 'string', 'rimraf: path should be a string')</span>
-<span class="cstat-no" title="statement not covered">  assert.equal(typeof cb, 'function', 'rimraf: callback function required')</span>
-<span class="cstat-no" title="statement not covered">  assert(options, 'rimraf: invalid options argument provided')</span>
-<span class="cstat-no" title="statement not covered">  assert.equal(typeof options, 'object', 'rimraf: options should be object')</span>
+<span class="cstat-no" title="statement not covered" >  assert(p, 'rimraf: missing path')</span>
+<span class="cstat-no" title="statement not covered" >  assert.equal(typeof p, 'string', 'rimraf: path should be a string')</span>
+<span class="cstat-no" title="statement not covered" >  assert.equal(typeof cb, 'function', 'rimraf: callback function required')</span>
+<span class="cstat-no" title="statement not covered" >  assert(options, 'rimraf: invalid options argument provided')</span>
+<span class="cstat-no" title="statement not covered" >  assert.equal(typeof options, 'object', 'rimraf: options should be object')</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  defaults(options)</span>
+<span class="cstat-no" title="statement not covered" >  defaults(options)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  rimraf_(p, options, <span class="fstat-no" title="function not covered">function CB (er) {</span></span>
-<span class="cstat-no" title="statement not covered">    if (er) {</span>
-<span class="cstat-no" title="statement not covered">      if (isWindows &amp;&amp; (er.code === 'EBUSY' || er.code === 'ENOTEMPTY' || er.code === 'EPERM') &amp;&amp;</span>
+<span class="cstat-no" title="statement not covered" >  rimraf_(p, options, <span class="fstat-no" title="function not covered" >function CB (er) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (er) {</span>
+<span class="cstat-no" title="statement not covered" >      if (isWindows &amp;&amp; (er.code === 'EBUSY' || er.code === 'ENOTEMPTY' || er.code === 'EPERM') &amp;&amp;</span>
           busyTries &lt; options.maxBusyTries) {
-<span class="cstat-no" title="statement not covered">        busyTries++</span>
-<span class="cstat-no" title="statement not covered">        let time = busyTries * 100</span>
+<span class="cstat-no" title="statement not covered" >        busyTries++</span>
+<span class="cstat-no" title="statement not covered" >        let time = busyTries * 100</span>
         // try again, with the same exact callback as this one.
-<span class="cstat-no" title="statement not covered">        return setTimeout(() =&gt; <span class="cstat-no" title="statement not covered">rimraf_(p, options, CB),</span> time)</span>
+<span class="cstat-no" title="statement not covered" >        return setTimeout(() =&gt; <span class="cstat-no" title="statement not covered" >rimraf_(p, options, CB),</span> time)</span>
       }
 &nbsp;
       // already gone
-<span class="cstat-no" title="statement not covered">      if (er.code === 'ENOENT') <span class="cstat-no" title="statement not covered">er = null</span></span>
+<span class="cstat-no" title="statement not covered" >      if (er.code === 'ENOENT') <span class="cstat-no" title="statement not covered" >er = null</span></span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    cb(er)</span>
+<span class="cstat-no" title="statement not covered" >    cb(er)</span>
   })
 }
 &nbsp;
@@ -877,150 +879,150 @@ const isWindows = (process.platform === 'win32')
 //
 // If anyone ever complains about this, then I guess the strategy could
 // be made configurable somehow.  But until then, YAGNI.
-<span class="fstat-no" title="function not covered">function rimraf_ (p, options, cb) {</span>
-<span class="cstat-no" title="statement not covered">  assert(p)</span>
-<span class="cstat-no" title="statement not covered">  assert(options)</span>
-<span class="cstat-no" title="statement not covered">  assert(typeof cb === 'function')</span>
+<span class="fstat-no" title="function not covered" >function rimraf_ (p, options, cb) {</span>
+<span class="cstat-no" title="statement not covered" >  assert(p)</span>
+<span class="cstat-no" title="statement not covered" >  assert(options)</span>
+<span class="cstat-no" title="statement not covered" >  assert(typeof cb === 'function')</span>
 &nbsp;
   // sunos lets the root user unlink directories, which is... weird.
   // so we have to lstat here and make sure it's not a dir.
-<span class="cstat-no" title="statement not covered">  options.lstat(p, (er, st) =&gt; {</span>
-<span class="cstat-no" title="statement not covered">    if (er &amp;&amp; er.code === 'ENOENT') {</span>
-<span class="cstat-no" title="statement not covered">      return cb(null)</span>
+<span class="cstat-no" title="statement not covered" >  options.lstat(p, (er, st) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    if (er &amp;&amp; er.code === 'ENOENT') {</span>
+<span class="cstat-no" title="statement not covered" >      return cb(null)</span>
     }
 &nbsp;
     // Windows can EPERM on stat.  Life is suffering.
-<span class="cstat-no" title="statement not covered">    if (er &amp;&amp; er.code === 'EPERM' &amp;&amp; isWindows) {</span>
-<span class="cstat-no" title="statement not covered">      return fixWinEPERM(p, options, er, cb)</span>
+<span class="cstat-no" title="statement not covered" >    if (er &amp;&amp; er.code === 'EPERM' &amp;&amp; isWindows) {</span>
+<span class="cstat-no" title="statement not covered" >      return fixWinEPERM(p, options, er, cb)</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (st &amp;&amp; st.isDirectory()) {</span>
-<span class="cstat-no" title="statement not covered">      return rmdir(p, options, er, cb)</span>
+<span class="cstat-no" title="statement not covered" >    if (st &amp;&amp; st.isDirectory()) {</span>
+<span class="cstat-no" title="statement not covered" >      return rmdir(p, options, er, cb)</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    options.unlink(p, er =&gt; {</span>
-<span class="cstat-no" title="statement not covered">      if (er) {</span>
-<span class="cstat-no" title="statement not covered">        if (er.code === 'ENOENT') {</span>
-<span class="cstat-no" title="statement not covered">          return cb(null)</span>
+<span class="cstat-no" title="statement not covered" >    options.unlink(p, er =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if (er) {</span>
+<span class="cstat-no" title="statement not covered" >        if (er.code === 'ENOENT') {</span>
+<span class="cstat-no" title="statement not covered" >          return cb(null)</span>
         }
-<span class="cstat-no" title="statement not covered">        if (er.code === 'EPERM') {</span>
-<span class="cstat-no" title="statement not covered">          return (isWindows)</span>
+<span class="cstat-no" title="statement not covered" >        if (er.code === 'EPERM') {</span>
+<span class="cstat-no" title="statement not covered" >          return (isWindows)</span>
             ? fixWinEPERM(p, options, er, cb)
             : rmdir(p, options, er, cb)
         }
-<span class="cstat-no" title="statement not covered">        if (er.code === 'EISDIR') {</span>
-<span class="cstat-no" title="statement not covered">          return rmdir(p, options, er, cb)</span>
+<span class="cstat-no" title="statement not covered" >        if (er.code === 'EISDIR') {</span>
+<span class="cstat-no" title="statement not covered" >          return rmdir(p, options, er, cb)</span>
         }
       }
-<span class="cstat-no" title="statement not covered">      return cb(er)</span>
+<span class="cstat-no" title="statement not covered" >      return cb(er)</span>
     })
   })
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function fixWinEPERM (p, options, er, cb) {</span>
-<span class="cstat-no" title="statement not covered">  assert(p)</span>
-<span class="cstat-no" title="statement not covered">  assert(options)</span>
-<span class="cstat-no" title="statement not covered">  assert(typeof cb === 'function')</span>
-<span class="cstat-no" title="statement not covered">  if (er) {</span>
-<span class="cstat-no" title="statement not covered">    assert(er instanceof Error)</span>
+<span class="fstat-no" title="function not covered" >function fixWinEPERM (p, options, er, cb) {</span>
+<span class="cstat-no" title="statement not covered" >  assert(p)</span>
+<span class="cstat-no" title="statement not covered" >  assert(options)</span>
+<span class="cstat-no" title="statement not covered" >  assert(typeof cb === 'function')</span>
+<span class="cstat-no" title="statement not covered" >  if (er) {</span>
+<span class="cstat-no" title="statement not covered" >    assert(er instanceof Error)</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  options.chmod(p, 666, er2 =&gt; {</span>
-<span class="cstat-no" title="statement not covered">    if (er2) {</span>
-<span class="cstat-no" title="statement not covered">      cb(er2.code === 'ENOENT' ? null : er)</span>
+<span class="cstat-no" title="statement not covered" >  options.chmod(p, 666, er2 =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    if (er2) {</span>
+<span class="cstat-no" title="statement not covered" >      cb(er2.code === 'ENOENT' ? null : er)</span>
     } else {
-<span class="cstat-no" title="statement not covered">      options.stat(p, (er3, stats) =&gt; {</span>
-<span class="cstat-no" title="statement not covered">        if (er3) {</span>
-<span class="cstat-no" title="statement not covered">          cb(er3.code === 'ENOENT' ? null : er)</span>
-        } else <span class="cstat-no" title="statement not covered">if (stats.isDirectory()) {</span>
-<span class="cstat-no" title="statement not covered">          rmdir(p, options, er, cb)</span>
+<span class="cstat-no" title="statement not covered" >      options.stat(p, (er3, stats) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        if (er3) {</span>
+<span class="cstat-no" title="statement not covered" >          cb(er3.code === 'ENOENT' ? null : er)</span>
+        } else <span class="cstat-no" title="statement not covered" >if (stats.isDirectory()) {</span>
+<span class="cstat-no" title="statement not covered" >          rmdir(p, options, er, cb)</span>
         } else {
-<span class="cstat-no" title="statement not covered">          options.unlink(p, cb)</span>
+<span class="cstat-no" title="statement not covered" >          options.unlink(p, cb)</span>
         }
       })
     }
   })
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function fixWinEPERMSync (p, options, er) {</span>
-<span class="cstat-no" title="statement not covered">  let stats</span>
+<span class="fstat-no" title="function not covered" >function fixWinEPERMSync (p, options, er) {</span>
+<span class="cstat-no" title="statement not covered" >  let stats</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  assert(p)</span>
-<span class="cstat-no" title="statement not covered">  assert(options)</span>
-<span class="cstat-no" title="statement not covered">  if (er) {</span>
-<span class="cstat-no" title="statement not covered">    assert(er instanceof Error)</span>
+<span class="cstat-no" title="statement not covered" >  assert(p)</span>
+<span class="cstat-no" title="statement not covered" >  assert(options)</span>
+<span class="cstat-no" title="statement not covered" >  if (er) {</span>
+<span class="cstat-no" title="statement not covered" >    assert(er instanceof Error)</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  try {</span>
-<span class="cstat-no" title="statement not covered">    options.chmodSync(p, 666)</span>
+<span class="cstat-no" title="statement not covered" >  try {</span>
+<span class="cstat-no" title="statement not covered" >    options.chmodSync(p, 666)</span>
   } catch (er2) {
-<span class="cstat-no" title="statement not covered">    if (er2.code === 'ENOENT') {</span>
-<span class="cstat-no" title="statement not covered">      return</span>
+<span class="cstat-no" title="statement not covered" >    if (er2.code === 'ENOENT') {</span>
+<span class="cstat-no" title="statement not covered" >      return</span>
     } else {
-<span class="cstat-no" title="statement not covered">      throw er</span>
+<span class="cstat-no" title="statement not covered" >      throw er</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  try {</span>
-<span class="cstat-no" title="statement not covered">    stats = options.statSync(p)</span>
+<span class="cstat-no" title="statement not covered" >  try {</span>
+<span class="cstat-no" title="statement not covered" >    stats = options.statSync(p)</span>
   } catch (er3) {
-<span class="cstat-no" title="statement not covered">    if (er3.code === 'ENOENT') {</span>
-<span class="cstat-no" title="statement not covered">      return</span>
+<span class="cstat-no" title="statement not covered" >    if (er3.code === 'ENOENT') {</span>
+<span class="cstat-no" title="statement not covered" >      return</span>
     } else {
-<span class="cstat-no" title="statement not covered">      throw er</span>
+<span class="cstat-no" title="statement not covered" >      throw er</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (stats.isDirectory()) {</span>
-<span class="cstat-no" title="statement not covered">    rmdirSync(p, options, er)</span>
+<span class="cstat-no" title="statement not covered" >  if (stats.isDirectory()) {</span>
+<span class="cstat-no" title="statement not covered" >    rmdirSync(p, options, er)</span>
   } else {
-<span class="cstat-no" title="statement not covered">    options.unlinkSync(p)</span>
+<span class="cstat-no" title="statement not covered" >    options.unlinkSync(p)</span>
   }
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function rmdir (p, options, originalEr, cb) {</span>
-<span class="cstat-no" title="statement not covered">  assert(p)</span>
-<span class="cstat-no" title="statement not covered">  assert(options)</span>
-<span class="cstat-no" title="statement not covered">  if (originalEr) {</span>
-<span class="cstat-no" title="statement not covered">    assert(originalEr instanceof Error)</span>
+<span class="fstat-no" title="function not covered" >function rmdir (p, options, originalEr, cb) {</span>
+<span class="cstat-no" title="statement not covered" >  assert(p)</span>
+<span class="cstat-no" title="statement not covered" >  assert(options)</span>
+<span class="cstat-no" title="statement not covered" >  if (originalEr) {</span>
+<span class="cstat-no" title="statement not covered" >    assert(originalEr instanceof Error)</span>
   }
-<span class="cstat-no" title="statement not covered">  assert(typeof cb === 'function')</span>
+<span class="cstat-no" title="statement not covered" >  assert(typeof cb === 'function')</span>
 &nbsp;
   // try to rmdir first, and only readdir on ENOTEMPTY or EEXIST (SunOS)
   // if we guessed wrong, and it's not a directory, then
   // raise the original error.
-<span class="cstat-no" title="statement not covered">  options.rmdir(p, er =&gt; {</span>
-<span class="cstat-no" title="statement not covered">    if (er &amp;&amp; (er.code === 'ENOTEMPTY' || er.code === 'EEXIST' || er.code === 'EPERM')) {</span>
-<span class="cstat-no" title="statement not covered">      rmkids(p, options, cb)</span>
-    } else <span class="cstat-no" title="statement not covered">if (er &amp;&amp; er.code === 'ENOTDIR') {</span>
-<span class="cstat-no" title="statement not covered">      cb(originalEr)</span>
+<span class="cstat-no" title="statement not covered" >  options.rmdir(p, er =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    if (er &amp;&amp; (er.code === 'ENOTEMPTY' || er.code === 'EEXIST' || er.code === 'EPERM')) {</span>
+<span class="cstat-no" title="statement not covered" >      rmkids(p, options, cb)</span>
+    } else <span class="cstat-no" title="statement not covered" >if (er &amp;&amp; er.code === 'ENOTDIR') {</span>
+<span class="cstat-no" title="statement not covered" >      cb(originalEr)</span>
     } else {
-<span class="cstat-no" title="statement not covered">      cb(er)</span>
+<span class="cstat-no" title="statement not covered" >      cb(er)</span>
     }
   })
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function rmkids (p, options, cb) {</span>
-<span class="cstat-no" title="statement not covered">  assert(p)</span>
-<span class="cstat-no" title="statement not covered">  assert(options)</span>
-<span class="cstat-no" title="statement not covered">  assert(typeof cb === 'function')</span>
+<span class="fstat-no" title="function not covered" >function rmkids (p, options, cb) {</span>
+<span class="cstat-no" title="statement not covered" >  assert(p)</span>
+<span class="cstat-no" title="statement not covered" >  assert(options)</span>
+<span class="cstat-no" title="statement not covered" >  assert(typeof cb === 'function')</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  options.readdir(p, (er, files) =&gt; {</span>
-<span class="cstat-no" title="statement not covered">    if (er) <span class="cstat-no" title="statement not covered">return cb(er)</span></span>
+<span class="cstat-no" title="statement not covered" >  options.readdir(p, (er, files) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    if (er) <span class="cstat-no" title="statement not covered" >return cb(er)</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    let n = files.length</span>
-<span class="cstat-no" title="statement not covered">    let errState</span>
+<span class="cstat-no" title="statement not covered" >    let n = files.length</span>
+<span class="cstat-no" title="statement not covered" >    let errState</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (n === 0) <span class="cstat-no" title="statement not covered">return options.rmdir(p, cb)</span></span>
+<span class="cstat-no" title="statement not covered" >    if (n === 0) <span class="cstat-no" title="statement not covered" >return options.rmdir(p, cb)</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    files.forEach(f =&gt; {</span>
-<span class="cstat-no" title="statement not covered">      rimraf(path.join(p, f), options, er =&gt; {</span>
-<span class="cstat-no" title="statement not covered">        if (errState) {</span>
-<span class="cstat-no" title="statement not covered">          return</span>
+<span class="cstat-no" title="statement not covered" >    files.forEach(f =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      rimraf(path.join(p, f), options, er =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        if (errState) {</span>
+<span class="cstat-no" title="statement not covered" >          return</span>
         }
-<span class="cstat-no" title="statement not covered">        if (er) <span class="cstat-no" title="statement not covered">return cb(errState = er)</span></span>
-<span class="cstat-no" title="statement not covered">        if (--n === 0) {</span>
-<span class="cstat-no" title="statement not covered">          options.rmdir(p, cb)</span>
+<span class="cstat-no" title="statement not covered" >        if (er) <span class="cstat-no" title="statement not covered" >return cb(errState = er)</span></span>
+<span class="cstat-no" title="statement not covered" >        if (--n === 0) {</span>
+<span class="cstat-no" title="statement not covered" >          options.rmdir(p, cb)</span>
         }
       })
     })
@@ -1030,85 +1032,84 @@ const isWindows = (process.platform === 'win32')
 // this looks simpler, and is strictly *faster*, but will
 // tie up the JavaScript thread and fail on excessively
 // deep directory trees.
-<span class="fstat-no" title="function not covered">function rimrafSync (p, options) {</span>
-<span class="cstat-no" title="statement not covered">  let st</span>
+<span class="fstat-no" title="function not covered" >function rimrafSync (p, options) {</span>
+<span class="cstat-no" title="statement not covered" >  let st</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  options = options || {}</span>
-<span class="cstat-no" title="statement not covered">  defaults(options)</span>
+<span class="cstat-no" title="statement not covered" >  options = options || {}</span>
+<span class="cstat-no" title="statement not covered" >  defaults(options)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  assert(p, 'rimraf: missing path')</span>
-<span class="cstat-no" title="statement not covered">  assert.equal(typeof p, 'string', 'rimraf: path should be a string')</span>
-<span class="cstat-no" title="statement not covered">  assert(options, 'rimraf: missing options')</span>
-<span class="cstat-no" title="statement not covered">  assert.equal(typeof options, 'object', 'rimraf: options should be object')</span>
+<span class="cstat-no" title="statement not covered" >  assert(p, 'rimraf: missing path')</span>
+<span class="cstat-no" title="statement not covered" >  assert.equal(typeof p, 'string', 'rimraf: path should be a string')</span>
+<span class="cstat-no" title="statement not covered" >  assert(options, 'rimraf: missing options')</span>
+<span class="cstat-no" title="statement not covered" >  assert.equal(typeof options, 'object', 'rimraf: options should be object')</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  try {</span>
-<span class="cstat-no" title="statement not covered">    st = options.lstatSync(p)</span>
+<span class="cstat-no" title="statement not covered" >  try {</span>
+<span class="cstat-no" title="statement not covered" >    st = options.lstatSync(p)</span>
   } catch (er) {
-<span class="cstat-no" title="statement not covered">    if (er.code === 'ENOENT') {</span>
-<span class="cstat-no" title="statement not covered">      return</span>
+<span class="cstat-no" title="statement not covered" >    if (er.code === 'ENOENT') {</span>
+<span class="cstat-no" title="statement not covered" >      return</span>
     }
 &nbsp;
     // Windows can EPERM on stat.  Life is suffering.
-<span class="cstat-no" title="statement not covered">    if (er.code === 'EPERM' &amp;&amp; isWindows) {</span>
-<span class="cstat-no" title="statement not covered">      fixWinEPERMSync(p, options, er)</span>
+<span class="cstat-no" title="statement not covered" >    if (er.code === 'EPERM' &amp;&amp; isWindows) {</span>
+<span class="cstat-no" title="statement not covered" >      fixWinEPERMSync(p, options, er)</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  try {</span>
+<span class="cstat-no" title="statement not covered" >  try {</span>
     // sunos lets the root user unlink directories, which is... weird.
-<span class="cstat-no" title="statement not covered">    if (st &amp;&amp; st.isDirectory()) {</span>
-<span class="cstat-no" title="statement not covered">      rmdirSync(p, options, null)</span>
+<span class="cstat-no" title="statement not covered" >    if (st &amp;&amp; st.isDirectory()) {</span>
+<span class="cstat-no" title="statement not covered" >      rmdirSync(p, options, null)</span>
     } else {
-<span class="cstat-no" title="statement not covered">      options.unlinkSync(p)</span>
+<span class="cstat-no" title="statement not covered" >      options.unlinkSync(p)</span>
     }
   } catch (er) {
-<span class="cstat-no" title="statement not covered">    if (er.code === 'ENOENT') {</span>
-<span class="cstat-no" title="statement not covered">      return</span>
-    } else <span class="cstat-no" title="statement not covered">if (er.code === 'EPERM') {</span>
-<span class="cstat-no" title="statement not covered">      return isWindows ? fixWinEPERMSync(p, options, er) : rmdirSync(p, options, er)</span>
-    } else <span class="cstat-no" title="statement not covered">if (er.code !== 'EISDIR') {</span>
-<span class="cstat-no" title="statement not covered">      throw er</span>
+<span class="cstat-no" title="statement not covered" >    if (er.code === 'ENOENT') {</span>
+<span class="cstat-no" title="statement not covered" >      return</span>
+    } else <span class="cstat-no" title="statement not covered" >if (er.code === 'EPERM') {</span>
+<span class="cstat-no" title="statement not covered" >      return isWindows ? fixWinEPERMSync(p, options, er) : rmdirSync(p, options, er)</span>
+    } else <span class="cstat-no" title="statement not covered" >if (er.code !== 'EISDIR') {</span>
+<span class="cstat-no" title="statement not covered" >      throw er</span>
     }
-<span class="cstat-no" title="statement not covered">    rmdirSync(p, options, er)</span>
+<span class="cstat-no" title="statement not covered" >    rmdirSync(p, options, er)</span>
   }
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function rmdirSync (p, options, originalEr) {</span>
-<span class="cstat-no" title="statement not covered">  assert(p)</span>
-<span class="cstat-no" title="statement not covered">  assert(options)</span>
-<span class="cstat-no" title="statement not covered">  if (originalEr) {</span>
-<span class="cstat-no" title="statement not covered">    assert(originalEr instanceof Error)</span>
+<span class="fstat-no" title="function not covered" >function rmdirSync (p, options, originalEr) {</span>
+<span class="cstat-no" title="statement not covered" >  assert(p)</span>
+<span class="cstat-no" title="statement not covered" >  assert(options)</span>
+<span class="cstat-no" title="statement not covered" >  if (originalEr) {</span>
+<span class="cstat-no" title="statement not covered" >    assert(originalEr instanceof Error)</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  try {</span>
-<span class="cstat-no" title="statement not covered">    options.rmdirSync(p)</span>
+<span class="cstat-no" title="statement not covered" >  try {</span>
+<span class="cstat-no" title="statement not covered" >    options.rmdirSync(p)</span>
   } catch (er) {
-<span class="cstat-no" title="statement not covered">    if (er.code === 'ENOENT') {</span>
-<span class="cstat-no" title="statement not covered">      return</span>
-    } else <span class="cstat-no" title="statement not covered">if (er.code === 'ENOTDIR') {</span>
-<span class="cstat-no" title="statement not covered">      throw originalEr</span>
-    } else <span class="cstat-no" title="statement not covered">if (er.code === 'ENOTEMPTY' || er.code === 'EEXIST' || er.code === 'EPERM') {</span>
-<span class="cstat-no" title="statement not covered">      rmkidsSync(p, options)</span>
+<span class="cstat-no" title="statement not covered" >    if (er.code === 'ENOENT') {</span>
+<span class="cstat-no" title="statement not covered" >      return</span>
+    } else <span class="cstat-no" title="statement not covered" >if (er.code === 'ENOTDIR') {</span>
+<span class="cstat-no" title="statement not covered" >      throw originalEr</span>
+    } else <span class="cstat-no" title="statement not covered" >if (er.code === 'ENOTEMPTY' || er.code === 'EEXIST' || er.code === 'EPERM') {</span>
+<span class="cstat-no" title="statement not covered" >      rmkidsSync(p, options)</span>
     }
   }
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function rmkidsSync (p, options) {</span>
-<span class="cstat-no" title="statement not covered">  assert(p)</span>
-<span class="cstat-no" title="statement not covered">  assert(options)</span>
-<span class="cstat-no" title="statement not covered">  options.readdirSync(p).forEach(f =&gt; <span class="cstat-no" title="statement not covered">rimrafSync(path.join(p, f), options))</span></span>
-<span class="cstat-no" title="statement not covered">  options.rmdirSync(p, options)</span>
+<span class="fstat-no" title="function not covered" >function rmkidsSync (p, options) {</span>
+<span class="cstat-no" title="statement not covered" >  assert(p)</span>
+<span class="cstat-no" title="statement not covered" >  assert(options)</span>
+<span class="cstat-no" title="statement not covered" >  options.readdirSync(p).forEach(f =&gt; <span class="cstat-no" title="statement not covered" >rimrafSync(path.join(p, f), options))</span></span>
+<span class="cstat-no" title="statement not covered" >  options.rmdirSync(p, options)</span>
 }
 &nbsp;
 module.exports = rimraf
 rimraf.sync = rimrafSync
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 05:10:24 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sat Apr 15 2017 21:28:25 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
