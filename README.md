@@ -1,6 +1,6 @@
 # npmtest-fs-extra
 
-#### test coverage for  [fs-extra (v2.1.2)](https://github.com/jprichardson/node-fs-extra)  [![npm package](https://img.shields.io/npm/v/npmtest-fs-extra.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-fs-extra) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-fs-extra.svg)](https://travis-ci.org/npmtest/node-npmtest-fs-extra)
+#### basic test coverage for  [fs-extra (v2.1.2)](https://github.com/jprichardson/node-fs-extra)  [![npm package](https://img.shields.io/npm/v/npmtest-fs-extra.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-fs-extra) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-fs-extra.svg)](https://travis-ci.org/npmtest/node-npmtest-fs-extra)
 
 #### fs-extra contains methods that aren't included in the vanilla Node.js fs package. Such as mkdir -p, cp -r, and rm -rf.
 
